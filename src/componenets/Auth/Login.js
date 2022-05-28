@@ -1,23 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import backgroundImage from '../../assets/img/register_bg_2.png'
+import backgroundImageFile from '../../assets/img/register_bg_2.png'
+
 import gitHub from '../../assets/img/github.svg'
 import google from '../../assets/img/google.svg'
-
 
 import Navbar from '../NavBar/AuthNavbar'
 
 export default function Login() {
   return (
     <>
-    <Navbar transparent />
+      <Navbar transparent />
       <section className="relative w-full h-full py-40 min-h-screen">
-      <div
-            className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
-            style={{
-              backgroundImage: { backgroundImage },
-            }}
-          ></div>
+        <div
+          className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
+          style={{ backgroundImage: `url(${backgroundImageFile})` }}
+        ></div>
         <div className="container mx-auto px-4 h-full">
           <div className="flex content-center items-center justify-center h-full">
             <div className="w-full lg:w-4/12 px-4">
@@ -33,22 +31,14 @@ export default function Login() {
                       className="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                       type="button"
                     >
-                      <img
-                      alt="..."
-                      className="w-5 mr-1"
-                      src={gitHub}
-                    />
+                      <img alt="..." className="w-5 mr-1" src={gitHub} />
                       Github
                     </button>
                     <button
                       className="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                       type="button"
                     >
-                      <img
-                      alt="..."
-                      className="w-5 mr-1"
-                       src={google}
-                    />
+                      <img alt="..." className="w-5 mr-1" src={google} />
                       Google
                     </button>
                   </div>

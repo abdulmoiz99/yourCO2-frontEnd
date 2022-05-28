@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from '../../assets/img/register_bg_2.png'
+import backgroundImageFile from '../../assets/img/register_bg_2.png'
 import { Link } from 'react-router-dom'
 import Navbar from '../NavBar/AuthNavbar'
 
@@ -10,12 +10,10 @@ export default function Register() {
     <>
     <Navbar transparent />
      <section className="relative w-full h-full py-20 min-h-screen">
-      <div
-            className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
-            style={{
-              backgroundImage: { backgroundImage },
-            }}
-          ></div>
+     <div
+          className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
+          style={{ backgroundImage: `url(${backgroundImageFile})` }}
+        ></div>
       <div className="container mx-auto px-4 h-full">
         <div className="flex content-center items-center justify-center h-full">
           <div className="w-full lg:w-6/12 px-4">
