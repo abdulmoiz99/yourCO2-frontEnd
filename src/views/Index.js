@@ -9,9 +9,7 @@ import indexImage from '../assets/img/pattern_react.png'
 import CardLineChart from '../componenets/Cards/CardLineChart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faCalculator,
   faChartArea,
-  faChartLine,
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 
