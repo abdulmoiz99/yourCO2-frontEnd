@@ -2,14 +2,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import Footer from "components/Footers/Footer.js";
+import IndexNavbar from "../componenets/NavBar/IndexNavbar"
+import Footer from "../componenets/Footers/Footer";
 
 export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
-      {/* <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+      <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
@@ -51,12 +51,12 @@ export default function Index() {
 
         <img
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
-          src={require("assets/img/pattern_react.png").default}
+          src={require("../assets/img/pattern_react.png").default}
           alt="..."
         />
       </section>
 
-      <section className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
+      {/* <section className="mt-48 md:mt-40 pb-40 relative bg-blueGray-100">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
           style={{ transform: "translateZ(0)" }}
@@ -557,9 +557,9 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="py-20 bg-blueGray-600 overflow-hidden">
+      {/* <section className="py-20 bg-blueGray-600 overflow-hidden">
         <div className="container mx-auto pb-64">
           <div className="flex flex-wrap justify-center">
             <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
@@ -660,8 +660,8 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </section>
-      <Footer /> */}
+      </section> */}
+      <Footer />
     </>
   );
 }
