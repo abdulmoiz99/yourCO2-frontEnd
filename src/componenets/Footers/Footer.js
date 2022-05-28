@@ -72,12 +72,6 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      {/* <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://www.creative-tim.com/presentation?ref=nr-footer"
-                      >
-                        About Us
-                      </a> */}
                       <a
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                         href="/#"
