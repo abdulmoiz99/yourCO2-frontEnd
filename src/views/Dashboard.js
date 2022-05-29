@@ -32,8 +32,14 @@ export default function Dashboard() {
           <div className="flex flex-wrap mt-4">
             <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
               {/* <CardPageVisits /> */}
+              <button
+                className="bg-lightBlue-500 text-white active:bg-blueGray-500 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                type="button"
+              >
+                Upload Report
+              </button>
             </div>
-            
+
             <div className="w-full xl:w-4/12 px-4">
               {/* <CardSocialTraffic /> */}
             </div>

@@ -2,10 +2,8 @@ import React from 'react'
 import businessImage from '../../assets/img/Business.jpg'
 // components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fa42Group } from '@fortawesome/free-brands-svg-icons'
 import {
   faArrowCircleRight,
-  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 export default function CardProfile() {
   return (
