@@ -8,10 +8,7 @@ import '../assets/styles/tailwind.css'
 import indexImage from '../assets/img/pattern_react.png'
 import CardLineChart from '../componenets/Cards/CardLineChart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faChartArea,
-  faPaperPlane,
-} from '@fortawesome/free-solid-svg-icons'
+import { faChartArea, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 export default function Index() {
   return (
@@ -25,24 +22,23 @@ export default function Index() {
                 Your CO2 - An extension to calculate carbon emissions.
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                Your CO2 is Free and simple tool for the calcuations of carbon emissions
-                .  Your CO2 is Free and simple tool for the calcuations of carbon emissions.
+                Your CO2 is Free and simple tool for the calcuations of carbon
+                emissions . Your CO2 is Free and simple tool for the calcuations
+                of carbon emissions.
               </p>
               <div className="mt-12">
-                <a
-                  href="/#"
-                  target="_blank"
+              <Link
+                  to="/Auth"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
                   Get started
-                </a>
-                <a
-                  href="/#"
+                </Link>
+                <Link
+                  to="/"
                   className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-                  target="_blank"
                 >
                   Sample Report
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -142,27 +138,23 @@ export default function Index() {
                 navigate to get the Free version for your next projec!
               </p>
               <div className="sm:block flex flex-col mt-10">
-                <a
-                  href="/#"
-                  target="_blank"
-                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-2 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+              <Link
+                  to="/Auth"
+                  className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
                   Get started
-                </a>
-                <a
-                  href="/#"
-                  target="_blank"
-                  className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg"
+                </Link>
+                <Link
+                  to="/"
+                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
-                  <i className="fab fa-github text-lg mr-1"></i>
-                  <span>Sample Report</span>
-                </a>
+                  Sample Report
+                </Link>
               </div>
               <div className="text-center mt-16"></div>
             </div>
           </div>
         </div>
-
       </section>
 
       <Footer />
