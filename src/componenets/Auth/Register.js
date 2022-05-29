@@ -1,6 +1,6 @@
 import React from 'react'
 import backgroundImageFile from '../../assets/img/register_bg_2.png'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Navbar from '../NavBar/AuthNavbar'
 import Alert from '../Alerts/Alert'
 
