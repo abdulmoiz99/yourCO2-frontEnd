@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/00f78902-c87a-45d1-8ba6-e66043cf1a2e/microsoft.web/sites/subscriptions/00f78902-c87a-45d1-8ba6-e66043cf1a2e/resourceGroups/YourCO2/providers/Microsoft.Web/sites/yourCO2",
+    "appService.deploySubpath": "."
 }
