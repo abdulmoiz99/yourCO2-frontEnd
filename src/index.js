@@ -10,7 +10,7 @@ import Index from './views/Index'
 import { Login } from './componenets/Auth/Login'
 import { Register } from './componenets/Auth/Register'
 import Admin from './layout/Admin'
-import Dashboard from './views/Dashboard'
+import { Dashboard } from './views/Dashboard'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 root.render(
