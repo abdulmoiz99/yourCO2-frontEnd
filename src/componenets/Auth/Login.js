@@ -6,7 +6,7 @@ import gitHub from '../../assets/img/github.svg'
 import google from '../../assets/img/google.svg'
 
 import Navbar from '../NavBar/AuthNavbar'
-
+import Alert from '../Alerts/Alert'
 export class Login extends Component{
   render() {
     return (
@@ -46,6 +46,7 @@ export class Login extends Component{
                     <hr className="mt-6 border-b-1 border-blueGray-300" />
                   </div>
                   <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
+                    <Alert message = "Invalid username or password."/>
                     <div className="text-blueGray-400 text-center mb-3 font-bold">
                       <small>Or sign in with credentials</small>
                     </div>
