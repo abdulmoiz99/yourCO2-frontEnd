@@ -118,7 +118,7 @@ export default function Sidebar() {
                         : 'text-blueGray-300')
                     }
                   ></i>{' '}
-                  Settings
+                  Reports
                 </Link>
               </li>
               <li className="items-center">
