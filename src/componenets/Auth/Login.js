@@ -51,7 +51,7 @@ export class Login extends Component {
   renderAlert = () => {
     if (this.state.displayAlert) {
       return <>
-        <Alert message = "Invalid email address or password."/> 
+        <Alert message = {this.state.AlertMessage}/> 
       </>
     }
   }
