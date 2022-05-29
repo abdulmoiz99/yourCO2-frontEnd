@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // // components
 
@@ -10,7 +9,6 @@ import Sidebar from '../componenets/Sidebar/Sidebar'
 
 // // views
 
- import Dashboard from "../views/Dashboard";
 // import Maps from "views/admin/Maps.js";
 // import Settings from "views/admin/Settings.js";
 // import Tables from "views/admin/Tables.js";

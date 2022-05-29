@@ -3,6 +3,7 @@ import Sidebar from '../componenets/Sidebar/Sidebar'
 import NavBar from '../componenets/NavBar/AdminNavbar'
 import CardLineChart from '../componenets/Cards/CardLineChart'
 import HeaderStats from '../componenets/Headers/HeaderStats'
+import CardProfile from '../componenets/Cards/CardProfile'
 
 // components
 
@@ -25,13 +26,14 @@ export default function Dashboard() {
               <CardLineChart />
             </div>
             <div className="w-full xl:w-4/12 px-4">
-              {/* <CardBarChart /> */}
+              <CardProfile />
             </div>
           </div>
           <div className="flex flex-wrap mt-4">
             <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
               {/* <CardPageVisits /> */}
             </div>
+            
             <div className="w-full xl:w-4/12 px-4">
               {/* <CardSocialTraffic /> */}
             </div>

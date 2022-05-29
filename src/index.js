@@ -11,7 +11,6 @@ import { Login } from './componenets/Auth/Login'
 import { Register } from './componenets/Auth/Register'
 import Admin from './layout/Admin'
 import Dashboard from './views/Dashboard'
-import Sidebar from './componenets/Sidebar/Sidebar'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 root.render(
