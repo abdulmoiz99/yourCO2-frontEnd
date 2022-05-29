@@ -22,19 +22,19 @@ export default function HeaderStats() {
                   statPercentColor=""
                   statDescripiron=""
                   statIconName="far fa-chart-bar"
-                  statIconColor="bg-red-500"
+                  statIconColor="bg-orange-500"
                 />
               </div>
               <div className="w-full lg:w-6/12 xl:w-5/12 px-4">
                 <CardStats
-                  statSubtitle="REAL TIME GRID BASED  BEIS carbon footprint"
+                  statSubtitle=" BEIS carbon footprin"
                   statTitle="299"
                   statArrow=""
                   statPercent=""
                   statPercentColor=""
                   statDescripiron=""
                   statIconName="fas fa-chart-pie"
-                  statIconColor="bg-orange-500"
+                  statIconColor="bg-lightBlue-500"
                 />
               </div>
               {/* <div className="w-full lg:w-6/12 xl:w-3/12 px-4">
