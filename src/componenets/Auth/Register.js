@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import Navbar from '../NavBar/AuthNavbar'
 
 
-    
-export default function Register() {
+export class Register extends React.Component {
+  render()
+  {
   return (
     <>
     <Navbar transparent />
@@ -156,4 +157,4 @@ export default function Register() {
       </section>
     </>
   );
-}
+}  }

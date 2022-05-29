@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
 import Index from './views/Index'
 import { Login } from './componenets/Auth/Login'
-import Register from './componenets/Auth/Register'
+import {Register} from './componenets/Auth/Register'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 root.render(
