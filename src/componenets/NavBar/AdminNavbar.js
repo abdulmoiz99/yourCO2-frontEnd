@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-import UserDropdown from "../Dropdowns/UserDropdown";
+import UserDropdown from '../Dropdowns/UserDropdown'
 
 export default function Navbar() {
   return (
@@ -37,5 +37,5 @@ export default function Navbar() {
       </nav>
       {/* End Navbar */}
     </>
-  );
+  )
 }

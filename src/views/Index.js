@@ -27,7 +27,7 @@ export default function Index() {
                 of carbon emissions.
               </p>
               <div className="mt-12">
-              <Link
+                <Link
                   to="/Auth"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
@@ -110,7 +110,69 @@ export default function Index() {
             </div>
           </div>
         </div>
+        <div className="container mx-auto px-4 pb-32 pt-48">
+          <div className="items-center flex flex-wrap">
+            <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
+              <div className="md:pr-12">
+                <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
+                  <FontAwesomeIcon icon={faChartArea} />
+                </div>
+                <h3 className="text-3xl font-semibold">Complex Map</h3>
+                <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
+                  This extension comes a lot of fully coded examples that help
+                  you get started faster. You can adjust the colors and also the
+                  carbon factor.
+                </p>
+                <ul className="list-none mt-6">
+                  <li className="py-2">
+                    <div className="flex items-center">
+                      <div>
+                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                          <FontAwesomeIcon icon={faPaperPlane} />
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-blueGray-500">
+                          Built by Developers for Developers
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="py-2">
+                    <div className="flex items-center">
+                      <div>
+                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                          <FontAwesomeIcon icon={faPaperPlane} />
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-blueGray-500">
+                          Carefully crafted code for Calculations
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="py-2">
+                    <div className="flex items-center">
+                      <div>
+                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
+                          <i></i>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
 
+            <div className="w-full md:w-6/12 mr-auto px-0 pt-24 md:pt-0">
+              {/* <CardLineChart /> */}
+              <div>
+                <div id="map"></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="justify-center text-center flex flex-wrap mt-24">
           <div className="w-full md:w-6/12 px-12 md:px-4">
             <h2 className="font-semibold text-4xl">Beautiful Example Pages</h2>
@@ -121,7 +183,6 @@ export default function Index() {
             </p>
           </div>
         </div>
-
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
             <div className="w-full text-center lg:w-8/12">
@@ -138,7 +199,7 @@ export default function Index() {
                 navigate to get the Free version for your next projec!
               </p>
               <div className="sm:block flex flex-col mt-10">
-              <Link
+                <Link
                   to="/Auth"
                   className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
                 >
