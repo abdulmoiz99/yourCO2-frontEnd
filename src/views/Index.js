@@ -173,22 +173,31 @@ export default function Index() {
             </div>
           </div>
         </div>
-
-
-
-
-        <div className="justify-center text-center flex flex-wrap mt-24">
+        
+        <div className="justify-center text-center flex flex-wrap mt-14">
           <div className="w-full md:w-6/12 px-12 md:px-4">
-            <h2 className="font-semibold text-4xl">Beautiful Example Pages</h2>
+            <h2 className="font-semibold text-4xl">About</h2>
             <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-              Notus React is a completly new product built using our past
-              experience in web templates. Take the examples we made for you and
-              start playing with them.
+            The carbon emission from the electricity that your business uses is likely to be the largest contributor to your businesses carbon footprint.
             </p>
+            <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
+            To properly understand the carbon content of the electricity that you use, you need to understand carbon content of the electricity that is being generated in real time. This is because the carbon content of electricity changes significantly throughout the day, the week and at different times of the year. This is predominately due the changes in amount of sunshine and wind that is available to renewable energy generators to convent these natural resources to electricity.
+            </p>
+            <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
+            Your businesses electrical consumption also changes based on different amounts of heating, cooling, lighting and working patterns throughout the day, the weekend, and the winter and summer.
+            </p>
+            <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
+            The result of the changing carbon content of electricity, and your business using more or less electricity at certain times means that calculating the carbon footprint of your businesses electricity use by using an average carbon intensity can provide a very misleading and incorrect output. Having accuracy when accounting for your carbon footprint is absolutely key to delivering your businesses Net Zero ambitions.
+            </p>
+            <h3 className="text-3xl font-semibold">Try it and see how much difference there is when you account in real time.</h3>
           </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
+
         <div className="container mx-auto">
-          <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-64 py-16 px-12 relative z-10">
+          <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-10 py-16 px-12 relative z-10">
             <div className="w-full text-center lg:w-8/12">
               <p className="text-4xl text-center">
                 <span role="img" aria-label="love">
