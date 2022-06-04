@@ -4,10 +4,8 @@ import NavBar from '../componenets/NavBar/AdminNavbar'
 import CardLineChart from '../componenets/Cards/CardLineChart'
 import HeaderStats from '../componenets/Headers/HeaderStats'
 import CardProfile from '../componenets/Cards/CardProfile'
-import CardSettings from '../componenets/Cards/CardSettings'
+import { CardSettings } from '../componenets/Cards/CardSettings'
 import FooterAdmin from '../componenets/Footers/FooterAdmin'
-
-
 
 export class Dashboard extends React.Component {
   render() {
@@ -37,8 +35,7 @@ export class Dashboard extends React.Component {
             </div>
           </div>
         </div>
-        <FooterAdmin/>
-
+        <FooterAdmin />
       </>
     )
   }
