@@ -1,11 +1,14 @@
 import React from 'react'
 import { getStorage } from '../../shared/LoacalStorage'
+import Alert from '../Alerts/Alert'
+import axios from 'axios'
 
 // components
 
 export class CardSettings extends React.Component {
   constructor(props) {
     super(props)
+    this.state = { displayAlert: false, AlertMessage: 'dasdasd' }
     this.state = {
       BusinessName: '',
       BuildingName: '',
@@ -14,9 +17,11 @@ export class CardSettings extends React.Component {
       Address: '',
       StartDate: '',
       EndDate: '',
+      selectedFile: null,
     }
   }
   handleSubmission = async (event) => {
+    event.preventDefault()
     this.setState({ displayAlert: false })
     const {
       BusinessName,
@@ -26,33 +31,27 @@ export class CardSettings extends React.Component {
       Address,
       StartDate,
       EndDate,
+      selectedFile,
     } = this.state
-    event.preventDefault()
     let token = getStorage('token')
-    const body = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({
-        // BusinessName: emailAddress,
-        // BuildingName: password,
-        // NumberOfFloors: password,
-        // AreaOfBuilding: password,
-        // BuildingName: password,
-        // BuildingName: password,
-        // BuildingName: password,
-      }),
-    }
-    let url = `https://youco2api.azurewebsites.net/api/Business/add?BusinessName=${BusinessName}&BuildingName=${BuildingName}&NumberOfFloors=${NumberOfFloors}&AreaOfBuilding=${AreaOfBuilding}&Address=${Address}&StartDate=${StartDate}&EndDate=${EndDate} `
-    const response = await fetch(url, body)
-    const data = await response.json()
-    // when response is sucess
-    if (data.success === true) {
-      window.location.href = '/Dashboard'
-    } else if (data.success === false) {
-      this.setState({ displayAlert: true, AlertMessage: data.errors[0] })
+    let formData = new FormData()
+    formData.append('fromFile', selectedFile.name)
+    formData.append('file', selectedFile)
+    try {
+      let url = `https://youco2api.azurewebsites.net/api/Business/add?BusinessName=${BusinessName}&BuildingName=${BuildingName}&NumberOfFloors=${NumberOfFloors}&AreaOfBuilding=${AreaOfBuilding}&Address=${Address}&StartDate=${StartDate}&EndDate=${EndDate} `
+      const resp = await axios.post(url, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      console.log(resp)
+      if (resp.data.success === true) {
+        console.log('Success')
+      } else if (resp.data.success === false) {
+        this.setState({ displayAlert: true, AlertMessage: resp.data.errors[0] })
+      }
+    } catch (e) {
+      console.log(e)
     }
   }
 
@@ -61,6 +60,19 @@ export class CardSettings extends React.Component {
       [event.target.name]: event.target.value,
     })
   }
+  handleFileChange = (e) => {
+    this.setState({ ...this.state, selectedFile: e.target.files[0] })
+  }
+  renderAlert = () => {
+    if (this.state.displayAlert) {
+      return (
+        <>
+          <Alert message={this.state.AlertMessage} />
+        </>
+      )
+    }
+  }
+
   render() {
     return (
       <>
@@ -70,16 +82,11 @@ export class CardSettings extends React.Component {
               <h6 className="text-blueGray-700 text-xl font-bold">
                 Add Report
               </h6>
-              <button
-                className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
-                type="submit"
-              >
-                Generate
-              </button>
             </div>
           </div>
           <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
             <form onSubmit={this.handleSubmission}>
+              {this.renderAlert()}
               <h6 className="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
                 Business Information
               </h6>
@@ -220,6 +227,7 @@ export class CardSettings extends React.Component {
                     </label>
                     <input
                       required
+                      onChange={this.handleFileChange}
                       type="file"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                     />

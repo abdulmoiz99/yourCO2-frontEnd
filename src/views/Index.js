@@ -50,12 +50,13 @@ export default function Index() {
         />
       </section>
       <section className="mt-1 md:mt-1 pb-1 relative bg-blueGray-100">
-        
         <div className="container mx-auto px-4 pb-32 pt-48">
           <div className="items-center flex flex-wrap">
             <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
               <div className="md:pr-12">
-                <h3 className="text-3xl font-semibold">Real time carbon emissions of electricity in your region</h3>
+                <h3 className="text-3xl font-semibold">
+                  Real time carbon emissions of electricity in your region
+                </h3>
                 <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                   This extension comes a lot of fully coded examples that help
                   you get started faster. You can adjust the colors and also the
@@ -112,7 +113,6 @@ export default function Index() {
           </div>
         </div>
 
-
         <div className="container mx-auto px-4 pb-32 pt-30">
           <div className="items-center flex flex-wrap">
             <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
@@ -120,7 +120,10 @@ export default function Index() {
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-1 mb-6 shadow-lg rounded-full bg-white">
                   <FontAwesomeIcon icon={faChartArea} />
                 </div>
-                <h3 className="text-3xl font-semibold">See the last months regional electrical emissions data vs the static emissions commonly used</h3>
+                <h3 className="text-3xl font-semibold">
+                  See the last months regional electrical emissions data vs the
+                  static emissions commonly used
+                </h3>
                 <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                   This extension comes a lot of fully coded examples that help
                   you get started faster. You can adjust the colors and also the
@@ -173,28 +176,49 @@ export default function Index() {
             </div>
           </div>
         </div>
-        
+
         <div className="justify-center text-center flex flex-wrap mt-14">
           <div className="w-full md:w-6/12 px-12 md:px-4">
             <h2 className="font-semibold text-4xl">About</h2>
             <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-            The carbon emission from the electricity that your business uses is likely to be the largest contributor to your businesses carbon footprint.
+              The carbon emission from the electricity that your business uses
+              is likely to be the largest contributor to your businesses carbon
+              footprint.
             </p>
             <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-            To properly understand the carbon content of the electricity that you use, you need to understand carbon content of the electricity that is being generated in real time. This is because the carbon content of electricity changes significantly throughout the day, the week and at different times of the year. This is predominately due the changes in amount of sunshine and wind that is available to renewable energy generators to convent these natural resources to electricity.
+              To properly understand the carbon content of the electricity that
+              you use, you need to understand carbon content of the electricity
+              that is being generated in real time. This is because the carbon
+              content of electricity changes significantly throughout the day,
+              the week and at different times of the year. This is predominately
+              due the changes in amount of sunshine and wind that is available
+              to renewable energy generators to convent these natural resources
+              to electricity.
             </p>
             <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-            Your businesses electrical consumption also changes based on different amounts of heating, cooling, lighting and working patterns throughout the day, the weekend, and the winter and summer.
+              Your businesses electrical consumption also changes based on
+              different amounts of heating, cooling, lighting and working
+              patterns throughout the day, the weekend, and the winter and
+              summer.
             </p>
             <p className="text-lg leading-relaxed mt-4 mb-4 text-blueGray-500">
-            The result of the changing carbon content of electricity, and your business using more or less electricity at certain times means that calculating the carbon footprint of your businesses electricity use by using an average carbon intensity can provide a very misleading and incorrect output. Having accuracy when accounting for your carbon footprint is absolutely key to delivering your businesses Net Zero ambitions.
+              The result of the changing carbon content of electricity, and your
+              business using more or less electricity at certain times means
+              that calculating the carbon footprint of your businesses
+              electricity use by using an average carbon intensity can provide a
+              very misleading and incorrect output. Having accuracy when
+              accounting for your carbon footprint is absolutely key to
+              delivering your businesses Net Zero ambitions.
             </p>
-            <h3 className="text-3xl font-semibold">Try it and see how much difference there is when you account in real time.</h3>
+            <h3 className="text-3xl font-semibold">
+              Try it and see how much difference there is when you account in
+              real time.
+            </h3>
           </div>
         </div>
-        <br/>
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <br />
 
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-10 py-16 px-12 relative z-10">
