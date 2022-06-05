@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../componenets/Sidebar/Sidebar'
 import NavBar from '../componenets/NavBar/AdminNavbar'
-import CardLineChart from '../componenets/Cards/CardLineChart'
+import CarbonGraph from '../componenets/Cards/CarbonGraph'
 import HeaderStats from '../componenets/Headers/HeaderStats'
 import CardProfile from '../componenets/Cards/CardProfile'
 import { CardSettings } from '../componenets/Cards/CardSettings'
@@ -21,7 +21,7 @@ export class Dashboard extends React.Component {
           <div className="px-4 md:px-10 mx-auto w-full -m-24">
             <div className="flex flex-wrap">
               <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-                <CardLineChart />
+                <CarbonGraph />
               </div>
               <div className="w-full xl:w-4/12 px-4">
                 <CardProfile />

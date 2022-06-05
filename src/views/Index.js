@@ -6,7 +6,8 @@ import IndexNavbar from '../componenets/NavBar/IndexNavbar'
 import Footer from '../componenets/Footers/Footer'
 import '../assets/styles/tailwind.css'
 import indexImage from '../assets/img/pattern_react.png'
-import CardLineChart from '../componenets/Cards/CardLineChart'
+import CarbonGraph from '../componenets/Cards/CarbonGraph'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartArea, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { Helmet } from 'react-helmet'
@@ -179,7 +180,7 @@ export default function Index() {
             </div>
 
             <div className="w-full md:w-6/12 mr-auto px-0 pt-24 md:pt-0">
-              <CardLineChart />
+              <CarbonGraph />
             </div>
           </div>
         </div>
