@@ -9,10 +9,17 @@ import indexImage from '../assets/img/pattern_react.png'
 import CardLineChart from '../componenets/Cards/CardLineChart'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartArea, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { Helmet } from 'react-helmet'
 
 export default function Index() {
   return (
     <>
+      <Helmet>
+        <script src="./mapdata.js"></script>
+        <script src="./ukmap.js"></script>
+      </Helmet>
+      {/* <ScriptTag type="text/javascript" src="./mapdata.js" />
+      <ScriptTag type="text/javascript" src="./ukmap.js" /> */}
       <IndexNavbar fixed />
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
         <div className="container mx-auto items-center flex flex-wrap">
