@@ -14,13 +14,14 @@ export default function CardLineChart() {
           "May",
           "June",
           "July",
+          
         ],
         datasets: [
           {
             label: new Date().getFullYear(),
             backgroundColor: "#4c51bf",
             borderColor: "#4c51bf",
-            data: [65, 78, 66, 44, 56, 67, 75],
+            data: [65, 68, 86, 74, 56, 60, 87],
             fill: false,
           },
           {

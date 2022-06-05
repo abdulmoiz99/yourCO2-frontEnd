@@ -7,7 +7,7 @@ var simplemaps_ukmap_mapdata={
     popups: "detect",
     
 		//State defaults
-		state_description: "State description",
+		state_description: "Carbon Intensity",
     state_color: "#88A4BC",
     state_hover_color: "#3B729F",
     state_url: "https://simplemaps.com",
@@ -123,7 +123,7 @@ var simplemaps_ukmap_mapdata={
     },
     NI: {
       name: "Northern Ireland",
-      description: "default",
+      description: "Footprint",
       color: "default",
       hover_color: "default",
       url: "default"
@@ -186,11 +186,7 @@ var simplemaps_ukmap_mapdata={
     }
   },
   locations: {
-    "0": {
-      lat: 51.506,
-      lng: -0.127,
-      name: "London"
-    }
+    
   },
   labels: {}
 };
