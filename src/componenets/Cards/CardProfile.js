@@ -27,25 +27,24 @@ export class CardProfile extends React.Component {
             </div>
             <div className="text-xl  mt-10">
               <div className="mb-4 text-blueGray-600">
-                <FontAwesomeIcon icon={faArrowCircleRight} /> Business: ......
+                <FontAwesomeIcon icon={faArrowCircleRight} /> Business:{' '}
+                {this.props.businessName}
               </div>
               <div className="mb-4 text-blueGray-600">
-                <FontAwesomeIcon icon={faArrowCircleRight} /> Building name:
-                ......
+                <FontAwesomeIcon icon={faArrowCircleRight} /> Building name:{' '}
+                {this.props.buildingName}
               </div>
               <div className="mb-4 text-blueGray-600">
-                <FontAwesomeIcon icon={faArrowCircleRight} /> Number of: ......
+                <FontAwesomeIcon icon={faArrowCircleRight} /> Number of floors:{' '}
+                {this.props.numberOfFloors}
               </div>
               <div className="mb-4 text-blueGray-600">
-                <FontAwesomeIcon icon={faArrowCircleRight} /> Area of floors:
-                ......
+                <FontAwesomeIcon icon={faArrowCircleRight} /> Area of floors:{' '}
+                {this.props.areaOfBuilding}
               </div>
               <div className="mb-4 text-blueGray-600">
-                <FontAwesomeIcon icon={faArrowCircleRight} /> Address building:
-                ......
-              </div>
-              <div className="mb-4 text-blueGray-600">
-                <FontAwesomeIcon icon={faArrowCircleRight} /> Year of: ......
+                <FontAwesomeIcon icon={faArrowCircleRight} /> Address building:{' '}
+                {this.props.address}
               </div>
             </div>
           </div>

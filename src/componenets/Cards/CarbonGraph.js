@@ -6,11 +6,10 @@ export default function CarbonGraph(reportData) {
     let labelsList = []
     let valuesList = []
     let staticFactorList = []
-    console.log(reportData.reportData)
-    if (reportData.reportData) {
-      labelsList = reportData.reportData.graph.labels
-      valuesList = reportData.reportData.graph.values
-      staticFactorList = reportData.reportData.graph.staticFactors
+    if (reportData.reportData && reportData.reportData.result != null) {
+      labelsList = reportData.reportData.result.graph.labels
+      valuesList = reportData.reportData.result.graph.values
+      staticFactorList = reportData.reportData.result.graph.staticFactors
     }
     var config = {
       type: 'line',

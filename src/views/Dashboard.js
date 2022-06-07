@@ -13,6 +13,24 @@ export class Dashboard extends React.Component {
   constructor(props) {
     super(props)
     this.state = { report: [], loading: true }
+    this.state = {
+      businessName: '....',
+      buildingName: '....',
+      numberOfFloors: '....',
+      areaOfBuilding: '....',
+      address: '....',
+    }
+  }
+  populateBusinessInfo = () => {
+    if (this.state.report && this.state.report.result != null) {
+      this.setState({
+        businessName: this.state.report.result.businessInfo.businessName,
+        buildingName: this.state.report.result.businessInfo.buildingName,
+        numberOfFloors: this.state.report.result.businessInfo.numberOfFloors,
+        areaOfBuilding: this.state.report.result.businessInfo.areaOfBuilding,
+        address: this.state.report.result.businessInfo.address,
+      })
+    }
   }
   componentDidMount() {
     this.populateGraphData()
@@ -32,7 +50,7 @@ export class Dashboard extends React.Component {
         loading: false,
       },
       () => {
-        // console.log(data.result)
+        this.populateBusinessInfo()
       },
     )
     // }
@@ -49,10 +67,16 @@ export class Dashboard extends React.Component {
           <div className="px-4 md:px-10 mx-auto w-full -m-24">
             <div className="flex flex-wrap">
               <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-                <CarbonGraph reportData={this.state.report.result} />
+                <CarbonGraph reportData={this.state.report} />
               </div>
               <div className="w-full xl:w-4/12 px-4">
-                <CardProfile />
+                <CardProfile
+                  businessName={this.state.businessName}
+                  buildingName={this.state.buildingName}
+                  numberOfFloors={this.state.numberOfFloors}
+                  areaOfBuilding={this.state.areaOfBuilding}
+                  address={this.state.address}
+                />
               </div>
             </div>
             <div className="flex flex-wrap">
