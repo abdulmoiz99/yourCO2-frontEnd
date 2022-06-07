@@ -18,7 +18,7 @@ export default function CarbonGraph(reportData) {
         labels: labelsList,
         datasets: [
           {
-            label: 'Values',
+            label: 'Value',
             backgroundColor: '#4c51bf',
             borderColor: '#4c51bf',
             data: valuesList,
