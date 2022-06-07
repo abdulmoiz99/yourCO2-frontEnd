@@ -44,9 +44,8 @@ export class CardSettings extends React.Component {
           Authorization: `Bearer ${token}`,
         },
       })
-      console.log(resp)
       if (resp.data.success === true) {
-        console.log('Success')
+        this.props.onSelect(event)
       } else if (resp.data.success === false) {
         this.setState({ displayAlert: true, AlertMessage: resp.data.errors[0] })
       }
