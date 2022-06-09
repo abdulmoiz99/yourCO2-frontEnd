@@ -63,72 +63,13 @@ export default function Index() {
         </div> */}
       </section>
       <section className="mt-1 md:mt-1 pb-1 relative bg-blueGray-100">
-        <div className="container mx-auto px-4 pb-32 pt-48">
-          <div className="items-center flex flex-wrap">
-            <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
-              <div className="md:pr-12">
-                <h3 className="text-3xl font-semibold">
-                  Real time carbon emissions of electricity in your region
-                </h3>
-                <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  This extension comes a lot of fully coded examples that help
-                  you get started faster. You can adjust the colors and also the
-                  carbon factor.
-                </p>
-                <ul className="list-none mt-6">
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
-                          <FontAwesomeIcon icon={faPaperPlane} />
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-blueGray-500">
-                          Built by Developers for Developers
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
-                          <FontAwesomeIcon icon={faPaperPlane} />
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-blueGray-500">
-                          Carefully crafted code for Calculations
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="py-2">
-                    <div className="flex items-center">
-                      <div>
-                        <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-50 mr-3">
-                          <i></i>
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full md:w-6/12 mr-auto px-0 pt-24 md:pt-0">
-              {/* <CardLineChart /> */}
-              <div>
-                <div id="map"></div>
-              </div>
-            </div>
-          </div>
+        <div className="container mx-auto px-4 pb-30 pt-20">
+        
         </div>
 
         <div className="container mx-auto px-4 pb-32 pt-30">
           <div className="items-center flex flex-wrap">
-            <div className="w-full md:w-5/12 ml-auto px-12 md:px-4">
+            <div className="w-full md:w-5/12 ml-auto px-16 md:px-8">
               <div className="md:pr-12">
                 <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-1 mb-6 shadow-lg rounded-full bg-white">
                   <FontAwesomeIcon icon={faChartArea} />
@@ -137,12 +78,12 @@ export default function Index() {
                   See the last months regional electrical emissions data vs the
                   static emissions commonly used
                 </h3>
-                <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
+                {/* <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                   This extension comes a lot of fully coded examples that help
                   you get started faster. You can adjust the colors and also the
                   carbon factor.
-                </p>
-                <ul className="list-none mt-6">
+                </p> */}
+                {/* <ul className="list-none mt-6">
                   <li className="py-2">
                     <div className="flex items-center">
                       <div>
@@ -180,7 +121,7 @@ export default function Index() {
                       </div>
                     </div>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
 
