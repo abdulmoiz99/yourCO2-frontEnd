@@ -27,12 +27,13 @@ export default function Index() {
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-                Your CO2 - An extension to calculate carbon emissions.
+                What is your businesses real carbon footprint
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                Your CO2 is Free and simple tool for the calcuations of carbon
-                emissions . Your CO2 is Free and simple tool for the calcuations
-                of carbon emissions.
+                Generate a FREE REPORT which provides your business with its
+                carbon footprint based on the local real time emissions of the
+                electricity it has consumed over every half hour for the past
+                year.
               </p>
               <div className="mt-12">
                 <Link
@@ -51,11 +52,15 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <img
+        <div className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px" id="map"></div>
+        {/* <img
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
           src={indexImage}
           alt=".."
         />
+        <div>
+          <div id="map"></div>
+        </div> */}
       </section>
       <section className="mt-1 md:mt-1 pb-1 relative bg-blueGray-100">
         <div className="container mx-auto px-4 pb-32 pt-48">
