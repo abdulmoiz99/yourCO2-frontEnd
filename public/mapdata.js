@@ -10,7 +10,7 @@ var simplemaps_ukmap_mapdata={
 		state_description: "Calculating...",
     state_color: "#88A4BC",
     state_hover_color: "#3B729F",
-    state_url: "https://simplemaps.com",
+    state_url: "",
     border_size: 1.5,
     border_color: "#ffffff",
     all_states_inactive: "no",
@@ -38,7 +38,7 @@ var simplemaps_ukmap_mapdata={
     hide_labels: "no",
    
 		//Zoom settings
-		manual_zoom: "yes",
+		manual_zoom: "no",
     back_image: "no",
     arrow_box: "no",
     navigation_size: "40",
@@ -246,49 +246,49 @@ var S = http.get("https://api.carbonintensity.org.uk/regional/regionid/16");
 
 Promise.all([NS, SS, NWE, NEE, SY, NW, SW, WM, EM, EE, SWE, SE, L, SEE, S]).then((values) => {
 
-  simplemaps_ukmap_mapdata.state_specific.ES.description = values[0].data[0].data[0].intensity.forecast + " kWh";
+  simplemaps_ukmap_mapdata.state_specific.ES.description = values[0].data[0].data[0].intensity.forecast + " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.ES.color = getColor(values[0].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.NS.description = values[0].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.NS.description = values[0].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.NS.color = getColor(values[0].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.SS.description = values[1].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.SS.description = values[1].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.SS.color = getColor(values[1].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.NW.description = values[2].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.NW.description = values[2].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.NW.color =getColor(values[2].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.NE.description = values[3].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.NE.description = values[3].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.NE.color = getColor(values[3].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.YH.description = values[4].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.YH.description = values[4].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.YH.color = getColor(values[4].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.EW.description = values[5].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.EW.description = values[5].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.EW.color = getColor(values[5].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.WV.description = values[6].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.WV.description = values[6].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.WV.color = getColor(values[6].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.WM.description = values[7].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.WM.description = values[7].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.WM.color = getColor(values[7].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.EM.description = values[8].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.EM.description = values[8].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.EM.color = getColor(values[8].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.EE.description = values[9].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.EE.description = values[9].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.EE.color =getColor( values[9].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.SW.description = values[10].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.SW.description = values[10].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.SW.color = getColor(values[10].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.GL.description = values[12].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.GL.description = values[12].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.GL.color =getColor( values[12].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.SE.description = values[13].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.SE.description = values[13].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.SE.color = getColor(values[13].data[0].data[0].intensity.index);
 
-  simplemaps_ukmap_mapdata.state_specific.HI.description = values[14].data[0].data[0].intensity.forecast+ " kWh";
+  simplemaps_ukmap_mapdata.state_specific.HI.description = values[14].data[0].data[0].intensity.forecast+ " kgco2e/kWh";
   simplemaps_ukmap_mapdata.state_specific.HI.color = getColor(values[14].data[0].data[0].intensity.index);
 
   simplemaps_ukmap.refresh();
