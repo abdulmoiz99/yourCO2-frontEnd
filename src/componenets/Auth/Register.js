@@ -216,7 +216,7 @@ export class Register extends React.Component {
                   </div>
                   <div className="w-1/2 text-right">
                     <Link to="/auth" className="text-blueGray-200">
-                      <small>Sign in instead?</small>
+                      <strong>Sign in instead?</strong>
                     </Link>
                   </div>
                 </div>

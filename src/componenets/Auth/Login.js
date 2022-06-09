@@ -136,7 +136,7 @@ export class Login extends Component {
                           autoComplete="on"
                         />
                       </div>
-                      <div>
+                      {/* <div>
                         <label className="inline-flex items-center cursor-pointer">
                           <input
                             id="customCheckLogin"
@@ -147,7 +147,7 @@ export class Login extends Component {
                             Remember me
                           </span>
                         </label>
-                      </div>
+                      </div> */}
 
                       <div className="text-center mt-6">
                         <button
@@ -172,7 +172,7 @@ export class Login extends Component {
                   </div>
                   <div className="w-1/2 text-right">
                     <Link to="/auth/register" className="text-blueGray-200">
-                      <small>Create new account</small>
+                      <strong>Create new account</strong>
                     </Link>
                   </div>
                 </div>
