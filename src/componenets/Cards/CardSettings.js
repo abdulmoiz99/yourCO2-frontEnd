@@ -46,6 +46,7 @@ export class CardSettings extends React.Component {
       })
       if (resp.data.success === true) {
         this.props.onSelect(event)
+        this.props.UpdateReportStatus(event)
       } else if (resp.data.success === false) {
         this.setState({ displayAlert: true, AlertMessage: resp.data.errors[0] })
       }

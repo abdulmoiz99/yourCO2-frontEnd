@@ -20,6 +20,7 @@ export class Dashboard extends React.Component {
       areaOfBuilding: '....',
       address: '....',
     }
+    this.state = { reportLoaded: false }
   }
   populateBusinessInfo = () => {
     if (this.state.report && this.state.report.result != null) {
@@ -34,6 +35,9 @@ export class Dashboard extends React.Component {
   }
   componentDidMount() {
     this.populateGraphData()
+  }
+  UpdateReportStatus = () =>{
+    this.setState({reportLoaded: true})
   }
   populateGraphData = async () => {
     let token = getStorage('token')
@@ -65,23 +69,25 @@ export class Dashboard extends React.Component {
           <HeaderStats />
 
           <div className="px-4 md:px-10 mx-auto w-full -m-24">
-            <div className="flex flex-wrap">
-              <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-                <CarbonGraph reportData={this.state.report} />
+            {this.state.reportLoaded ? (
+              <div className="flex flex-wrap">
+                <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+                  <CarbonGraph reportData={this.state.report} />
+                </div>
+                <div className="w-full xl:w-4/12 px-4">
+                  <CardProfile
+                    businessName={this.state.businessName}
+                    buildingName={this.state.buildingName}
+                    numberOfFloors={this.state.numberOfFloors}
+                    areaOfBuilding={this.state.areaOfBuilding}
+                    address={this.state.address}
+                  />
+                </div>
               </div>
-              <div className="w-full xl:w-4/12 px-4">
-                <CardProfile
-                  businessName={this.state.businessName}
-                  buildingName={this.state.buildingName}
-                  numberOfFloors={this.state.numberOfFloors}
-                  areaOfBuilding={this.state.areaOfBuilding}
-                  address={this.state.address}
-                />
-              </div>
-            </div>
+            ) : null}
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 px-4">
-                <CardSettings onSelect={this.populateGraphData.bind(this)} />
+                <CardSettings UpdateReportStatus = {this.UpdateReportStatus.bind(this)} onSelect={this.populateGraphData.bind(this)} />
               </div>
             </div>
           </div>

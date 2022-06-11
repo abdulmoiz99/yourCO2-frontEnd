@@ -116,7 +116,7 @@ export default function CarbonGraph(reportData) {
                 Overview
               </h6>
               <h2 className="text-white text-xl font-semibold">
-                Carbon Emission
+              Monthly local real time grid emissions vs national average
               </h2>
             </div>
           </div>

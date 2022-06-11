@@ -27,7 +27,7 @@ export default function Index() {
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-                What is your businesses real carbon footprint
+              What is the carbon foot print of your business?
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                 Generate a FREE REPORT which provides your business with its
