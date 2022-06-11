@@ -22,7 +22,7 @@ export default function Index() {
       {/* <ScriptTag type="text/javascript" src="./mapdata.js" />
       <ScriptTag type="text/javascript" src="./ukmap.js" /> */}
       <IndexNavbar fixed />
-      <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+      <section className="header relative pt-20 items-center flex h-screen max-h-1000-px">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
@@ -52,7 +52,10 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <div className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px" id="map"></div>
+        <div
+          className="absolute top-0 b-auto right-0 pt-16 px-4 py-20 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
+          id="map"
+        ></div>
         {/* <img
           className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860px"
           src={indexImage}
@@ -63,9 +66,7 @@ export default function Index() {
         </div> */}
       </section>
       <section className="mt-1 md:mt-1 pb-1 relative bg-blueGray-100">
-        <div className="container mx-auto px-4 pb-30 pt-20">
-        
-        </div>
+        <div className="container mx-auto px-4 pb-30 pt-20"></div>
 
         <div className="container mx-auto px-4 pb-32 pt-30">
           <div className="items-center flex flex-wrap">
