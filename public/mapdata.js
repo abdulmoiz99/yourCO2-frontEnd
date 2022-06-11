@@ -94,7 +94,7 @@ var simplemaps_ukmap_mapdata={
       url: "default"
     },
     EW: {
-      name: "East Wales",
+      name: "South Wales", //"East Wales",
       description: "default",
       color: "default",
       hover_color: "default",
@@ -143,7 +143,7 @@ var simplemaps_ukmap_mapdata={
       url: "default"
     },
     SE: {
-      name: "South East England",
+      name: "England",// "South East England", 
       description: "default",
       color: "default",
       hover_color: "default",
@@ -194,10 +194,10 @@ function getColor(colorIndex) {
   let color = "";
   switch (colorIndex) {
     case "very low":
-      color = "#96CFBA";
+      color = "#559D82";
       break;
     case "low":
-        color = "#559D82";
+        color = "#96CFBA"; 
         break;
     case "moderate":
       color = "#D3C360";
@@ -233,7 +233,7 @@ var SS = http.get("https://api.carbonintensity.org.uk/regional/regionid/2");
 var NWE = http.get("https://api.carbonintensity.org.uk/regional/regionid/3");
 var NEE = http.get("https://api.carbonintensity.org.uk/regional/regionid/4");
 var SY = http.get("https://api.carbonintensity.org.uk/regional/regionid/5");
-var NW = http.get("https://api.carbonintensity.org.uk/regional/regionid/6");
+var NW = http.get("https://api.carbonintensity.org.uk/regional/regionid/7");
 var SW = http.get("https://api.carbonintensity.org.uk/regional/regionid/7");
 var WM = http.get("https://api.carbonintensity.org.uk/regional/regionid/8");
 var EM = http.get("https://api.carbonintensity.org.uk/regional/regionid/9");
@@ -241,7 +241,7 @@ var EE = http.get("https://api.carbonintensity.org.uk/regional/regionid/10");
 var SWE = http.get("https://api.carbonintensity.org.uk/regional/regionid/11");
 var SE = http.get("https://api.carbonintensity.org.uk/regional/regionid/12");
 var L = http.get("https://api.carbonintensity.org.uk/regional/regionid/13");
-var SEE = http.get("https://api.carbonintensity.org.uk/regional/regionid/14");
+var SEE = http.get("https://api.carbonintensity.org.uk/regional/regionid/12");
 var S = http.get("https://api.carbonintensity.org.uk/regional/regionid/16");
 
 Promise.all([NS, SS, NWE, NEE, SY, NW, SW, WM, EM, EE, SWE, SE, L, SEE, S]).then((values) => {
