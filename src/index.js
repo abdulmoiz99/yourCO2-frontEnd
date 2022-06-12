@@ -9,9 +9,9 @@ import reportWebVitals from './reportWebVitals'
 import Index from './views/Index'
 import { Login } from './componenets/Auth/Login'
 import { Register } from './componenets/Auth/Register'
-import Admin from './layout/Admin'
 import { Dashboard } from './views/Dashboard'
 import { AdminPage } from './views/AdminPage'
+import { IsAdmin } from './shared/LoacalStorage'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 root.render(
@@ -20,10 +20,8 @@ root.render(
       <Route path="/" element={<Index />}></Route>
       <Route path="/auth" element={<Login />}></Route>
       <Route path="/auth/register" element={<Register />}></Route>
-      <Route path="/admin" element={<Admin />}></Route>
       <Route path="/Dashboard" element={<Dashboard />}></Route>
       <Route path="/AdminPage" element={<AdminPage />}></Route>
-
     </Routes>
   </BrowserRouter>,
 )

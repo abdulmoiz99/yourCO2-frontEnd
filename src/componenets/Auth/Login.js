@@ -7,18 +7,18 @@ import google from '../../assets/img/google.svg'
 
 import Navbar from '../NavBar/AuthNavbar'
 import Alert from '../Alerts/Alert'
-import { setStorage, clearStorage } from "../../shared/LoacalStorage"
+import { setStorage, clearStorage, IsAdmin } from '../../shared/LoacalStorage'
 
 export class Login extends Component {
   constructor(props) {
     super(props)
     this.state = { emailAddress: '', password: '' }
     this.state = { displayAlert: false, AlertMessage: '' }
-    clearStorage();
+    clearStorage()
   }
 
   handleSubmission = async (event) => {
-    this.setState({displayAlert: false})     
+    this.setState({ displayAlert: false })
     const { emailAddress, password } = this.state
     event.preventDefault()
     const body = {
@@ -38,7 +38,12 @@ export class Login extends Component {
     // when response is sucess
     if (data.success === true) {
       setStorage('token', data.result.token.code) // save value in local storage
-      window.location.href = '/Dashboard'
+      console.log(IsAdmin())
+      if (IsAdmin()) {
+        window.location.href = '/AdminPage'
+      } else {
+        window.location.href = '/Dashboard'
+      }
     } else if (data.success === false) {
       this.setState({ displayAlert: true, AlertMessage: data.errors[0] })
     }
@@ -50,9 +55,11 @@ export class Login extends Component {
   }
   renderAlert = () => {
     if (this.state.displayAlert) {
-      return <>
-        <Alert message = {this.state.AlertMessage}/> 
-      </>
+      return (
+        <>
+          <Alert message={this.state.AlertMessage} />
+        </>
+      )
     }
   }
 

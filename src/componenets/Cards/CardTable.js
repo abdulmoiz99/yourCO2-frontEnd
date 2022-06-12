@@ -1,11 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faEye,
-  faPencilAlt,
-  faStreetView,
-} from '@fortawesome/free-solid-svg-icons'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { getStorage } from '../../shared/LoacalStorage'
 import CarbonGraph from './CarbonGraph'
 import { CardProfile } from './CardProfile'
@@ -15,7 +10,7 @@ export class CardTable extends React.Component {
   static color = 'light'
   constructor(props) {
     super(props)
-    this.state = { reportList: [], loading: true }
+    this.state = { report: [], reportList: [], loading: true }
     this.state = {
       businessName: '....',
       buildingName: '....',
@@ -42,10 +37,22 @@ export class CardTable extends React.Component {
       loading: false,
     })
   }
-  populateGraphData = async () => {
+  populateBusinessInfo = () => {
+    if (this.state.report && this.state.report.result != null) {
+      this.setState({
+        reportLoaded: true,
+        businessName: this.state.report.result.businessInfo.businessName,
+        buildingName: this.state.report.result.businessInfo.buildingName,
+        numberOfFloors: this.state.report.result.businessInfo.numberOfFloors,
+        areaOfBuilding: this.state.report.result.businessInfo.areaOfBuilding,
+        address: this.state.report.result.businessInfo.address,
+      })
+    }
+  }
+  populateGraphData = async (reportId) => {
     let token = getStorage('token')
     const response = await fetch(
-      'https://youco2api.azurewebsites.net/api/Business/reports',
+      `https://youco2api.azurewebsites.net/api/Business/reports-admin?reportId=${reportId}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       },
@@ -53,7 +60,7 @@ export class CardTable extends React.Component {
     const data = await response.json()
     this.setState(
       {
-        report: data.result,
+        report: data,
         loading: false,
       },
       () => {
@@ -62,11 +69,8 @@ export class CardTable extends React.Component {
     )
     // }
   }
-  scrollToBottom = () => {
-    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
-  }
   handleEdit = (reportId) => {
-    console.log(reportId)
+    this.populateGraphData(reportId)
   }
 
   reportReportList(reportList) {
@@ -184,18 +188,18 @@ export class CardTable extends React.Component {
             </table>
           </div>
         </div>
-              <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-                <CarbonGraph reportData={this.state.report} />
-              </div>
-              <div className="w-full xl:w-4/12 px-4">
-                <CardProfile
-                  businessName={this.state.businessName}
-                  buildingName={this.state.buildingName}
-                  numberOfFloors={this.state.numberOfFloors}
-                  areaOfBuilding={this.state.areaOfBuilding}
-                  address={this.state.address}
-                />
-              </div>
+        <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+          <CarbonGraph reportData={this.state.report} />
+        </div>
+        <div className="w-full xl:w-4/12 px-4">
+          <CardProfile
+            businessName={this.state.businessName}
+            buildingName={this.state.buildingName}
+            numberOfFloors={this.state.numberOfFloors}
+            areaOfBuilding={this.state.areaOfBuilding}
+            address={this.state.address}
+          />
+        </div>
       </>
     )
   }
