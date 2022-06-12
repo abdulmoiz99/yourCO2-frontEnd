@@ -8,7 +8,7 @@ import { CardProfile } from '../componenets/Cards/CardProfile'
 import { CardSettings } from '../componenets/Cards/CardSettings'
 import FooterAdmin from '../componenets/Footers/FooterAdmin'
 import { getStorage } from '../shared/LoacalStorage'
-import CardTable from '../componenets/Cards/CardTable'
+import { CardTable } from '../componenets/Cards/CardTable'
 
 export class AdminPage extends React.Component {
   constructor(props) {
