@@ -8,8 +8,9 @@ import { CardProfile } from '../componenets/Cards/CardProfile'
 import { CardSettings } from '../componenets/Cards/CardSettings'
 import FooterAdmin from '../componenets/Footers/FooterAdmin'
 import { getStorage } from '../shared/LoacalStorage'
+import CardTable from '../componenets/Cards/CardTable'
 
-export class Dashboard extends React.Component {
+export class AdminPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = { report: [], loading: true }
@@ -25,7 +26,7 @@ export class Dashboard extends React.Component {
   populateBusinessInfo = () => {
     if (this.state.report && this.state.report.result != null) {
       this.setState({
-        reportLoaded : true,
+        reportLoaded: false,
         businessName: this.state.report.result.businessInfo.businessName,
         buildingName: this.state.report.result.businessInfo.buildingName,
         numberOfFloors: this.state.report.result.businessInfo.numberOfFloors,
@@ -37,8 +38,8 @@ export class Dashboard extends React.Component {
   componentDidMount() {
     this.populateGraphData()
   }
-  UpdateReportStatus = () =>{
-    this.setState({reportLoaded: true})
+  UpdateReportStatus = () => {
+    this.setState({ reportLoaded: true })
   }
   populateGraphData = async () => {
     let token = getStorage('token')
@@ -65,7 +66,7 @@ export class Dashboard extends React.Component {
       <>
         <Sidebar />
         <div className="relative md:ml-64 bg-blueGray-100">
-          <NavBar  PageName = "Dashboard"/>
+          <NavBar PageName="Admin Page" />
           {/* Header */}
           <HeaderStats />
 
@@ -87,9 +88,8 @@ export class Dashboard extends React.Component {
               </div>
             ) : null}
             <div className="flex flex-wrap">
-              <div className="w-full lg:w-8/12 px-4">
-                <CardSettings UpdateReportStatus = {this.UpdateReportStatus.bind(this)} onSelect={this.populateGraphData.bind(this)} />
-              </div>
+              <CardTable />
+              {/* <CardSettings UpdateReportStatus = {this.UpdateReportStatus.bind(this)} onSelect={this.populateGraphData.bind(this)} /> */}
             </div>
           </div>
         </div>
