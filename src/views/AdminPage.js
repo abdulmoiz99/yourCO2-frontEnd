@@ -5,7 +5,6 @@ import CarbonGraph from '../componenets/Cards/CarbonGraph'
 
 import HeaderStats from '../componenets/Headers/HeaderStats'
 import { CardProfile } from '../componenets/Cards/CardProfile'
-import { CardSettings } from '../componenets/Cards/CardSettings'
 import FooterAdmin from '../componenets/Footers/FooterAdmin'
 import { getStorage } from '../shared/LoacalStorage'
 import { CardTable } from '../componenets/Cards/CardTable'
@@ -36,7 +35,7 @@ export class AdminPage extends React.Component {
     }
   }
   componentDidMount() {
-    this.populateGraphData()
+    // this.populateGraphData()
   }
   UpdateReportStatus = () => {
     this.setState({ reportLoaded: true })
@@ -52,7 +51,7 @@ export class AdminPage extends React.Component {
     const data = await response.json()
     this.setState(
       {
-        report: data,
+        report: data.result,
         loading: false,
       },
       () => {

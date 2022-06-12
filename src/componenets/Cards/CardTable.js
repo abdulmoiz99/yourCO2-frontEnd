@@ -1,11 +1,110 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import {
+  faEye,
+  faPencilAlt,
+  faStreetView,
+} from '@fortawesome/free-solid-svg-icons'
+import { getStorage } from '../../shared/LoacalStorage'
+import CarbonGraph from './CarbonGraph'
+import { CardProfile } from './CardProfile'
 
 // components
 export class CardTable extends React.Component {
-static color = "";
+  static color = 'light'
+  constructor(props) {
+    super(props)
+    this.state = { reportList: [], loading: true }
+    this.state = {
+      businessName: '....',
+      buildingName: '....',
+      numberOfFloors: '....',
+      areaOfBuilding: '....',
+      address: '....',
+    }
+    this.state = { reportLoaded: false }
+  }
+  componentDidMount() {
+    this.populateTableData()
+  }
+  populateTableData = async () => {
+    let token = getStorage('token')
+    const response = await fetch(
+      'https://youco2api.azurewebsites.net/api/Business/reports-list',
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      },
+    )
+    const data = await response.json()
+    this.setState({
+      reportList: data.result,
+      loading: false,
+    })
+  }
+  populateGraphData = async () => {
+    let token = getStorage('token')
+    const response = await fetch(
+      'https://youco2api.azurewebsites.net/api/Business/reports',
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      },
+    )
+    const data = await response.json()
+    this.setState(
+      {
+        report: data.result,
+        loading: false,
+      },
+      () => {
+        this.populateBusinessInfo()
+      },
+    )
+    // }
+  }
+  scrollToBottom = () => {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  }
+  handleEdit = (reportId) => {
+    console.log(reportId)
+  }
+
+  reportReportList(reportList) {
+    return (
+      <>
+        {reportList?.map((report) => (
+          <tr key={report.reportId}>
+            <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+              <span
+                className={
+                  'ml-3 font-bold ' +
+                  +(this.color === 'light' ? 'text-blueGray-600' : 'text-white')
+                }
+              >
+                {report.business}
+              </span>
+            </th>
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+              {report.building}
+            </td>
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+              {report.contactName}
+            </td>
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+              <button
+                id={report.reportId}
+                type="button"
+                onClick={() => this.handleEdit(report.reportId)}
+                className="btn btn-primary"
+              >
+                <FontAwesomeIcon icon={faEye} />
+              </button>
+            </td>
+          </tr>
+        ))}
+      </>
+    )
+  }
 
   render() {
     return (
@@ -13,7 +112,9 @@ static color = "";
         <div
           className={
             'relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded ' +
-            (this.color === 'light' ? 'bg-white' : 'bg-lightBlue-900 text-white')
+            (this.color === 'light'
+              ? 'bg-white'
+              : 'bg-lightBlue-900 text-white')
           }
         >
           <div className="rounded-t mb-0 px-4 py-3 border-0">
@@ -22,7 +123,9 @@ static color = "";
                 <h3
                   className={
                     'font-semibold text-lg ' +
-                    (this.color === 'light' ? 'text-blueGray-700' : 'text-white')
+                    (this.color === 'light'
+                      ? 'text-blueGray-700'
+                      : 'text-white')
                   }
                 >
                   User Reports
@@ -77,45 +180,23 @@ static color = "";
                   </th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                    <span
-                      className={
-                        'ml-3 font-bold ' +
-                        +(this.color === 'light'
-                          ? 'text-blueGray-600'
-                          : 'text-white')
-                      }
-                    >
-                      Folio3
-                    </span>
-                  </th>
-                  <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                    Building A
-                  </td>
-                  <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                    Naqqash Khan
-                  </td>
-                  <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                    <button id="1" type="button" className="btn btn-primary">
-                      <FontAwesomeIcon icon={faPencilAlt} />
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
+              <tbody>{this.reportReportList(this.state.reportList)}</tbody>
             </table>
           </div>
         </div>
+              <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+                <CarbonGraph reportData={this.state.report} />
+              </div>
+              <div className="w-full xl:w-4/12 px-4">
+                <CardProfile
+                  businessName={this.state.businessName}
+                  buildingName={this.state.buildingName}
+                  numberOfFloors={this.state.numberOfFloors}
+                  areaOfBuilding={this.state.areaOfBuilding}
+                  address={this.state.address}
+                />
+              </div>
       </>
     )
   }
-}
-
-CardTable.defaultProps = {
-  color: 'dark',
-}
-
-CardTable.propTypes = {
-  color: PropTypes.oneOf(['light', 'dark']),
 }
