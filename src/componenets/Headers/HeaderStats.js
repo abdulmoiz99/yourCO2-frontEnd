@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
 // components
 
-import CardStats from "../Cards/CardStats";
+import CardStats from '../Cards/CardStats'
 
 export default function HeaderStats() {
   return (
@@ -42,5 +42,5 @@ export default function HeaderStats() {
         </div>
       </div>
     </>
-  );
+  )
 }

@@ -3,29 +3,18 @@ import businessImage from '../../assets/img/Business.jpg'
 // components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
-export class CardProfile extends React.Component {
+export class CardDetails extends React.Component {
   render() {
     return (
       <>
-        <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16">
+        <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-1">
           <div className="px-6">
-            <div className="flex flex-wrap justify-center">
-              <div className="w-full px-4 flex justify-center">
-                <div className="relative">
-                  <img
-                    alt="..."
-                    src={businessImage}
-                    className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="text-center mt-12">
+            <div className="text-center mt-5">
               <h3 className="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
                 Business Info
               </h3>
             </div>
-            <div className="text-xl  mt-10">
+            <div className="text-xl  mt-5">
               <div className="mb-4 text-blueGray-600">
                 <FontAwesomeIcon icon={faArrowCircleRight} /> Business:{' '}
                 {this.props.businessName}
@@ -46,11 +35,25 @@ export class CardProfile extends React.Component {
                 <FontAwesomeIcon icon={faArrowCircleRight} /> Address building:{' '}
                 {this.props.address}
               </div>
-              
+            </div>
+            <hr className="my-4 md:min-w-full" />
+            <div className="text-center mt-5">
+              <h3 className="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                Carbon Footprint
+              </h3>
+            </div>
+            <div className="text-xl  mt-5">
+              <div className="mb-4 text-blueGray-600">
+                <FontAwesomeIcon icon={faArrowCircleRight} /> Grid Carbon
+                Footprint: {this.props.realtimeFootprint}
+              </div>
+              <div className="mb-4 text-blueGray-600">
+                <FontAwesomeIcon icon={faArrowCircleRight} /> BEIS Carbon
+                Footprint: {this.props.beisFootprint}
+              </div>
             </div>
           </div>
         </div>
-        
       </>
     )
   }

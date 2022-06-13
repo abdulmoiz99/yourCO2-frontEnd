@@ -4,6 +4,8 @@ import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { getStorage } from '../../shared/LoacalStorage'
 import CarbonGraph from './CarbonGraph'
 import { CardProfile } from './CardProfile'
+import CardStats from './CardStats'
+import { CardDetails } from './CardDetails'
 
 // components
 export class CardTable extends React.Component {
@@ -17,6 +19,8 @@ export class CardTable extends React.Component {
       numberOfFloors: '....',
       areaOfBuilding: '....',
       address: '....',
+      beisFootprint: '....',
+      realtimeFootprint: '....',
     }
     this.state = { reportLoaded: false }
   }
@@ -46,6 +50,8 @@ export class CardTable extends React.Component {
         numberOfFloors: this.state.report.result.businessInfo.numberOfFloors,
         areaOfBuilding: this.state.report.result.businessInfo.areaOfBuilding,
         address: this.state.report.result.businessInfo.address,
+        beisFootprint: this.state.report.result.beisFootprint.toFixed(2),
+        realtimeFootprint: this.state.report.result.realtimeFootprint.toFixed(2),
       })
     }
   }
@@ -90,6 +96,12 @@ export class CardTable extends React.Component {
             </th>
             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
               {report.building}
+            </td>
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+              {report.contactName}
+            </td>
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+              {report.contactName}
             </td>
             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
               {report.contactName}
@@ -180,6 +192,26 @@ export class CardTable extends React.Component {
                         : 'bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700')
                     }
                   >
+                    Grid Carbon Footprint
+                  </th>
+                  <th
+                    className={
+                      'px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left ' +
+                      (this.color === 'light'
+                        ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                        : 'bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700')
+                    }
+                  >
+                    BEIS Carbon Footprint
+                  </th>
+                  <th
+                    className={
+                      'px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left ' +
+                      (this.color === 'light'
+                        ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                        : 'bg-lightBlue-800 text-lightBlue-300 border-lightBlue-700')
+                    }
+                  >
                     Actions
                   </th>
                 </tr>
@@ -188,16 +220,18 @@ export class CardTable extends React.Component {
             </table>
           </div>
         </div>
-        <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+        <div className="w-full xl:w-8/12 mb-19 xl:mb-0 px-4">
           <CarbonGraph reportData={this.state.report} />
         </div>
         <div className="w-full xl:w-4/12 px-4">
-          <CardProfile
+          <CardDetails
             businessName={this.state.businessName}
             buildingName={this.state.buildingName}
             numberOfFloors={this.state.numberOfFloors}
             areaOfBuilding={this.state.areaOfBuilding}
             address={this.state.address}
+            realtimeFootprint={this.state.realtimeFootprint}
+            beisFootprint={this.state.beisFootprint}
           />
         </div>
       </>
