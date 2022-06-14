@@ -12,6 +12,7 @@ import { Register } from './componenets/Auth/Register'
 import { Dashboard } from './views/Dashboard'
 import { AdminPage } from './views/AdminPage'
 import { IsAdmin } from './shared/LoacalStorage'
+import Landing from './views/Landing'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 root.render(
@@ -22,6 +23,8 @@ root.render(
       <Route path="/auth/register" element={<Register />}></Route>
       <Route path="/Dashboard" element={<Dashboard />}></Route>
       <Route path="/AdminPage" element={<AdminPage />}></Route>
+      <Route path="/ContactUs" element={<Landing />}></Route>
+
     </Routes>
   </BrowserRouter>,
 )
