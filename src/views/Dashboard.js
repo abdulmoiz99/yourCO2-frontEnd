@@ -8,6 +8,8 @@ import { CardProfile } from '../componenets/Cards/CardProfile'
 import { CardSettings } from '../componenets/Cards/CardSettings'
 import FooterAdmin from '../componenets/Footers/FooterAdmin'
 import { getStorage, IsAdmin } from '../shared/LoacalStorage'
+import HeaderBar from '../componenets/Headers/HeaderBar'
+import { CardDetails } from '../componenets/Cards/CardDetails'
 
 export class Dashboard extends React.Component {
   constructor(props) {
@@ -19,26 +21,32 @@ export class Dashboard extends React.Component {
       numberOfFloors: '....',
       areaOfBuilding: '....',
       address: '....',
+      beisFootprint: '....',
+      realtimeFootprint: '....',
     }
     this.state = { reportLoaded: false }
   }
   populateBusinessInfo = () => {
     if (this.state.report && this.state.report.result != null) {
       this.setState({
-        reportLoaded : true,
+        reportLoaded: true,
         businessName: this.state.report.result.businessInfo.businessName,
         buildingName: this.state.report.result.businessInfo.buildingName,
         numberOfFloors: this.state.report.result.businessInfo.numberOfFloors,
         areaOfBuilding: this.state.report.result.businessInfo.areaOfBuilding,
         address: this.state.report.result.businessInfo.address,
+        beisFootprint: this.state.report.result.beisFootprint.toFixed(2),
+        realtimeFootprint: this.state.report.result.realtimeFootprint.toFixed(
+          2,
+        ),
       })
     }
   }
   componentDidMount() {
     this.populateGraphData()
   }
-  UpdateReportStatus = () =>{
-    this.setState({reportLoaded: true})
+  UpdateReportStatus = () => {
+    this.setState({ reportLoaded: true })
   }
   populateGraphData = async () => {
     let token = getStorage('token')
@@ -65,9 +73,9 @@ export class Dashboard extends React.Component {
       <>
         <Sidebar isAdmin={IsAdmin()} />
         <div className="relative md:ml-64 bg-blueGray-100">
-          <NavBar  PageName = "Dashboard"/>
+          <NavBar PageName="Dashboard" />
           {/* Header */}
-          <HeaderStats />
+          <HeaderBar />
 
           <div className="px-4 md:px-10 mx-auto w-full -m-24">
             {this.state.reportLoaded ? (
@@ -76,19 +84,24 @@ export class Dashboard extends React.Component {
                   <CarbonGraph reportData={this.state.report} />
                 </div>
                 <div className="w-full xl:w-4/12 px-4">
-                  <CardProfile
+                  <CardDetails
                     businessName={this.state.businessName}
                     buildingName={this.state.buildingName}
                     numberOfFloors={this.state.numberOfFloors}
                     areaOfBuilding={this.state.areaOfBuilding}
                     address={this.state.address}
+                    realtimeFootprint={this.state.realtimeFootprint}
+                    beisFootprint={this.state.beisFootprint}
                   />
                 </div>
               </div>
             ) : null}
             <div className="flex flex-wrap">
               <div className="w-full lg:w-8/12 px-4">
-                <CardSettings UpdateReportStatus = {this.UpdateReportStatus.bind(this)} onSelect={this.populateGraphData.bind(this)} />
+                <CardSettings
+                  UpdateReportStatus={this.UpdateReportStatus.bind(this)}
+                  onSelect={this.populateGraphData.bind(this)}
+                />
               </div>
             </div>
           </div>
