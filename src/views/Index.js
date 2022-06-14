@@ -76,8 +76,7 @@ export default function Index() {
                   <FontAwesomeIcon icon={faChartArea} />
                 </div>
                 <h3 className="text-3xl font-semibold">
-                  See the last months regional electrical emissions data vs the
-                  static emissions commonly used
+                Monthly local real time grid emissions vs national average
                 </h3>
                 {/* <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                   This extension comes a lot of fully coded examples that help

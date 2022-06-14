@@ -2,7 +2,7 @@ import React from 'react'
 
 import UserDropdown from '../Dropdowns/UserDropdown'
 
-export default function Navbar() {
+export default function Navbar({ PageName }) {
   return (
     <>
       {/* Navbar */}
@@ -14,7 +14,7 @@ export default function Navbar() {
             href="#pablo"
             onClick={(e) => e.preventDefault()}
           >
-            Dashboard
+            {PageName}
           </a>
           {/* Form */}
           {/* User */}

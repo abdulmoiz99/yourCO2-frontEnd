@@ -7,7 +7,7 @@ import HeaderStats from '../componenets/Headers/HeaderStats'
 import { CardProfile } from '../componenets/Cards/CardProfile'
 import { CardSettings } from '../componenets/Cards/CardSettings'
 import FooterAdmin from '../componenets/Footers/FooterAdmin'
-import { getStorage } from '../shared/LoacalStorage'
+import { getStorage, IsAdmin } from '../shared/LoacalStorage'
 
 export class Dashboard extends React.Component {
   constructor(props) {
@@ -25,6 +25,7 @@ export class Dashboard extends React.Component {
   populateBusinessInfo = () => {
     if (this.state.report && this.state.report.result != null) {
       this.setState({
+        reportLoaded : true,
         businessName: this.state.report.result.businessInfo.businessName,
         buildingName: this.state.report.result.businessInfo.buildingName,
         numberOfFloors: this.state.report.result.businessInfo.numberOfFloors,
@@ -62,9 +63,9 @@ export class Dashboard extends React.Component {
   render() {
     return (
       <>
-        <Sidebar />
+        <Sidebar isAdmin={IsAdmin()} />
         <div className="relative md:ml-64 bg-blueGray-100">
-          <NavBar />
+          <NavBar  PageName = "Dashboard"/>
           {/* Header */}
           <HeaderStats />
 

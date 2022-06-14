@@ -20,6 +20,7 @@
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
     "hoist-non-react-statics": "^3.3.2",
+    "jwt-decode": "^3.1.2",
     "postcss": "8.2.8",
     "react": "^18.1.0",
     "react-apexcharts": "^1.4.0",
