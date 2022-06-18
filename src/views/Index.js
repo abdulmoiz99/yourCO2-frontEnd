@@ -177,18 +177,18 @@ export default function Index() {
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-10 py-16 px-12 relative z-10">
             <div className="w-full text-center lg:w-8/12">
-              <p className="text-4xl text-center">
+              {/* <p className="text-4xl text-center">
                 <span role="img" aria-label="love">
                   😍
                 </span>
-              </p>
-              <h3 className="font-semibold text-3xl">
+              </p> */}
+              {/* <h3 className="font-semibold text-3xl">
                 Do you love this Starter Kit?
               </h3>
               <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
                 Cause if you do, it can be yours now. Hit the buttons below to
                 navigate to get the Free version for your next projec!
-              </p>
+              </p> */}
               <div className="sm:block flex flex-col mt-10">
                 <Link
                   to="/Auth/Register"

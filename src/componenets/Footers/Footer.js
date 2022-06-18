@@ -1,13 +1,14 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faDribbble,
-  faFacebookF,
-  faGithub,
+  faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
   return (
     <>
       <footer className="relative bg-blueGray-200 pt-8 pb-6">
@@ -41,26 +42,16 @@ export default function Footer() {
                 <button
                   className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
+                  onClick={() => openInNewTab('https://www.linkedin.com/company/your-co2/')}
                 >
-                  <FontAwesomeIcon icon={faFacebookF} />
+                  <FontAwesomeIcon icon={faLinkedin} />
                 </button>
                 <button
                   className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
+                  onClick={() => openInNewTab('https://mobile.twitter.com/Yourco2_uk')}
                 >
                   <FontAwesomeIcon icon={faTwitter} />
-                </button>
-                <button
-                  className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <FontAwesomeIcon icon={faDribbble} />
-                </button>
-                <button
-                  className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
                 </button>
               </div>
             </div>

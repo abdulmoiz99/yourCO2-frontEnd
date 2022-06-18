@@ -11,7 +11,6 @@ import { Login } from './componenets/Auth/Login'
 import { Register } from './componenets/Auth/Register'
 import { Dashboard } from './views/Dashboard'
 import { AdminPage } from './views/AdminPage'
-import { IsAdmin } from './shared/LoacalStorage'
 import Landing from './views/Landing'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))

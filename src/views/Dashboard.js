@@ -3,8 +3,6 @@ import Sidebar from '../componenets/Sidebar/Sidebar'
 import NavBar from '../componenets/NavBar/AdminNavbar'
 import CarbonGraph from '../componenets/Cards/CarbonGraph'
 
-import HeaderStats from '../componenets/Headers/HeaderStats'
-import { CardProfile } from '../componenets/Cards/CardProfile'
 import { CardSettings } from '../componenets/Cards/CardSettings'
 import FooterAdmin from '../componenets/Footers/FooterAdmin'
 import { getStorage, IsAdmin } from '../shared/LoacalStorage'
