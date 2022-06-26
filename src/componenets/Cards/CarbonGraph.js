@@ -17,14 +17,14 @@ export default function CarbonGraph(reportData) {
         labels: labelsList,
         datasets: [
           {
-            label: 'Value',
+            label: 'Regional real time carbon calculation',
             backgroundColor: '#4c51bf',
             borderColor: '#4c51bf',
             data: valuesList,
             fill: false,
           },
           {
-            label: 'Static Factor',
+            label: 'Static carbon calculation (BEIS)',
             fill: false,
             backgroundColor: '#fff',
             borderColor: '#fff',

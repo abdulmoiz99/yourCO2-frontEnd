@@ -2,7 +2,27 @@ import React from 'react'
 import { getStorage } from '../../shared/LoacalStorage'
 import Alert from '../Alerts/Alert'
 import axios from 'axios'
+import Select from 'react-select'
 
+const options = [
+  { value: '1', label: 'North Scotland' },
+  { value: '2', label: 'South Scotland' },
+  { value: '3', label: 'North West England' },
+  { value: '4', label: 'North East England' },
+  { value: '5', label: 'Yorkshire' },
+  { value: '6', label: 'North Wales' },
+  { value: '7', label: 'South Wales' },
+  { value: '8', label: 'West Midlands' },
+  { value: '9', label: 'East Midlands' },
+  { value: '10', label: 'East England' },
+  { value: '11', label: 'South West England' },
+  { value: '12', label: 'South England' },
+  { value: '13', label: 'London' },
+  { value: '14', label: 'South East England' },
+  { value: '15', label: 'England' },
+  { value: '16', label: 'Scotland' },
+  { value: '17', label: 'Wales' },
+]
 // components
 
 export class CardSettings extends React.Component {
@@ -15,6 +35,7 @@ export class CardSettings extends React.Component {
       NumberOfFloors: '',
       AreaOfBuilding: '',
       Address: '',
+      RegionId: '',
       StartDate: '',
       EndDate: '',
       selectedFile: null,
@@ -32,13 +53,14 @@ export class CardSettings extends React.Component {
       StartDate,
       EndDate,
       selectedFile,
+      RegionId,
     } = this.state
     let token = getStorage('token')
     let formData = new FormData()
     formData.append('fromFile', selectedFile.name)
     formData.append('file', selectedFile)
     try {
-      let url = `https://youco2api.azurewebsites.net/api/Business/add?BusinessName=${BusinessName}&BuildingName=${BuildingName}&NumberOfFloors=${NumberOfFloors}&AreaOfBuilding=${AreaOfBuilding}&Address=${Address}&StartDate=${StartDate}&EndDate=${EndDate} `
+      let url = `https://youco2api.azurewebsites.net/api/Business/add?BusinessName=${BusinessName}&BuildingName=${BuildingName}&NumberOfFloors=${NumberOfFloors}&AreaOfBuilding=${AreaOfBuilding}&RegionId=${RegionId}&Address=${Address}&StartDate=${StartDate}&EndDate=${EndDate} `
       const resp = await axios.post(url, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -72,7 +94,9 @@ export class CardSettings extends React.Component {
       )
     }
   }
-
+  handleRegion = (selectedOption) => {
+    this.setState({ RegionId: selectedOption.value })
+  }
   render() {
     return (
       <>
@@ -215,6 +239,25 @@ export class CardSettings extends React.Component {
                       type="text"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                     />
+                  </div>
+                </div>
+                <div className="w-full lg:w-12/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Region
+                    </label>
+                    <Select options={options} onChange={this.handleRegion} />
+                    {/* <input
+                      required
+                      name="Address"
+                      value={this.state.Address}
+                      onChange={this.handleChange}
+                      type="select"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    /> */}
                   </div>
                 </div>
                 <div className="w-full lg:w-12/12 px-4">
