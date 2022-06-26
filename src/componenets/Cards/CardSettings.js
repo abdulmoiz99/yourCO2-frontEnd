@@ -250,14 +250,6 @@ export class CardSettings extends React.Component {
                       Region
                     </label>
                     <Select options={options} onChange={this.handleRegion} />
-                    {/* <input
-                      required
-                      name="Address"
-                      value={this.state.Address}
-                      onChange={this.handleChange}
-                      type="select"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    /> */}
                   </div>
                 </div>
                 <div className="w-full lg:w-12/12 px-4">

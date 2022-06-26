@@ -1,5 +1,5 @@
 import React from 'react'
-import businessImage from '../../assets/img/Business.jpg'
+// import businessImage from '../../assets/img/Business.jpg'
 // components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'

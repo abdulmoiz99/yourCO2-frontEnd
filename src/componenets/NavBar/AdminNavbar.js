@@ -1,7 +1,4 @@
 import React from 'react'
-
-import UserDropdown from '../Dropdowns/UserDropdown'
-
 export default function Navbar({ PageName }) {
   return (
     <>

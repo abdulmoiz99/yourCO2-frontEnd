@@ -2,7 +2,6 @@ import React from "react";
 
 // components
 
-import CardStats from "../Cards/CardStats";
 
 export default function HeaderBar() {
   return (

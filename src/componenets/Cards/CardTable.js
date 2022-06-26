@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { getStorage } from '../../shared/LoacalStorage'
 import CarbonGraph from './CarbonGraph'
-import { CardProfile } from './CardProfile'
-import CardStats from './CardStats'
 import { CardDetails } from './CardDetails'
 
 // components
