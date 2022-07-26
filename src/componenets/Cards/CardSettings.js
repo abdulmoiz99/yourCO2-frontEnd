@@ -115,25 +115,25 @@ export class CardSettings extends React.Component {
                 Business Information
               </h6>
               <div className="flex flex-wrap">
-                <div className="w-full lg:w-6/12 px-4">
+                <div className="w-full lg:w-4/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Business Name
+                      Business name
                     </label>
                     <input
                       required
-                      name="BusinessName"
-                      value={this.state.BusinessName}
+                      name="BuildingName"
+                      value={this.state.BuildingName}
                       onChange={this.handleChange}
                       type="text"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                     />
                   </div>
                 </div>
-                <div className="w-full lg:w-6/12 px-4">
+                <div className="w-full lg:w-4/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -151,13 +151,13 @@ export class CardSettings extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="w-full lg:w-6/12 px-4">
+                <div className="w-full lg:w-4/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Number of Floors
+                      Building post code
                     </label>
                     <input
                       required
@@ -169,13 +169,13 @@ export class CardSettings extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="w-full lg:w-6/12 px-4">
+                <div className="w-full lg:w-4/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Area of Building
+                      Year building was completed
                     </label>
                     <input
                       required
@@ -187,7 +187,353 @@ export class CardSettings extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="w-full lg:w-6/12 px-4">
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Building type / main function
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Number of floors/floors your business occupies
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Total floor area/area your business occupies
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Net internal area/area your business occupies
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      EPC rating
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      DEC rating (if relevant)
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Number of floors/floors your business occupies
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3"></div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Main ventilation source
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Installed capacity
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Main heating source
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Installed capacity
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Main domestic hot water source
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Installed capacity
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Main cooling source
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Installed capacity
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Does the building have Thermal storage
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Installed capacity
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Does the building have on-site renewables
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Installed capacity
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                {/* <div className="w-full lg:w-6/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -222,7 +568,7 @@ export class CardSettings extends React.Component {
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                     />
                   </div>
-                </div>
+                </div> */}
                 <div className="w-full lg:w-12/12 px-4">
                   <div className="relative w-full mb-3">
                     <label

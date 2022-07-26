@@ -95,7 +95,7 @@ export class Dashboard extends React.Component {
               </div>
             ) : null}
             <div className="flex flex-wrap">
-              <div className="w-full lg:w-8/12 px-4">
+              <div className="w-full px-4">
                 <CardSettings
                   UpdateReportStatus={this.UpdateReportStatus.bind(this)}
                   onSelect={this.populateGraphData.bind(this)}
