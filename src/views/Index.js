@@ -11,6 +11,7 @@ import CarbonGraph from '../componenets/Cards/CarbonGraph'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartArea, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { Helmet } from 'react-helmet'
+import IMAGE from '../assets/img/login.jpg'
 
 export default function Index() {
   return (
@@ -27,7 +28,7 @@ export default function Index() {
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-              What is the carbon foot print of your business?
+                What is the carbon foot print of your business?
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                 Generate a FREE REPORT which provides your business with its
@@ -65,6 +66,7 @@ export default function Index() {
           <div id="map"></div>
         </div> */}
       </section>
+
       <section className="mt-1 md:mt-1 pb-1 relative bg-blueGray-100">
         <div className="container mx-auto px-4 pb-30 pt-20"></div>
 
@@ -76,7 +78,7 @@ export default function Index() {
                   <FontAwesomeIcon icon={faChartArea} />
                 </div>
                 <h3 className="text-3xl font-semibold">
-                Monthly local real time grid emissions vs national average
+                  Monthly local real time grid emissions vs national average
                 </h3>
                 {/* <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                   This extension comes a lot of fully coded examples that help
@@ -170,25 +172,70 @@ export default function Index() {
             </h3>
           </div>
         </div>
+       
         <br />
+
+
+        <div className="container mx-auto">
+          <div className="justify-center flex flex-wrap">
+            <div className="w-full lg:w-12/12 px-4  -mt-10">
+              <div className="flex flex-wrap">
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Login Page
+                  </h5>
+                  <Link to="/auth">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        src={IMAGE}
+                      />
+                    </div>
+                  </Link>
+                </div>
+
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                    Instructions
+                  </h5>
+                  <Link to="/instructions">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        src={IMAGE}
+                      />
+                    </div>
+                  </Link>
+                </div>
+
+                <div className="w-full lg:w-4/12 px-4">
+                  <h5 className="text-xl font-semibold pb-4 text-center">
+                   Sample Report
+                  </h5>
+                  <Link to="/sampleReport">
+                    <div className="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150">
+                      <img
+                        alt="..."
+                        className="align-middle border-none max-w-full h-auto rounded-lg"
+                        src={IMAGE}
+                      />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <br />
         <br />
 
-        <div className="container mx-auto">
+        <br />
+
+        {/* <div className="container mx-auto">
           <div className="flex flex-wrap justify-center bg-white shadow-xl rounded-lg -mt-10 py-16 px-12 relative z-10">
             <div className="w-full text-center lg:w-8/12">
-              {/* <p className="text-4xl text-center">
-                <span role="img" aria-label="love">
-                  😍
-                </span>
-              </p> */}
-              {/* <h3 className="font-semibold text-3xl">
-                Do you love this Starter Kit?
-              </h3>
-              <p className="text-blueGray-500 text-lg leading-relaxed mt-4 mb-4">
-                Cause if you do, it can be yours now. Hit the buttons below to
-                navigate to get the Free version for your next projec!
-              </p> */}
               <div className="sm:block flex flex-col mt-10">
                 <Link
                   to="/Auth/Register"
@@ -206,8 +253,9 @@ export default function Index() {
               <div className="text-center mt-16"></div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
+      
 
       <Footer />
     </>
