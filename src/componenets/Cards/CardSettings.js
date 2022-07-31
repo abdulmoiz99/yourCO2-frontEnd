@@ -121,7 +121,11 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Business name
+                      Business name{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
                     </label>
                     <input
                       required
@@ -157,7 +161,11 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Building post code
+                      Building post code{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
                     </label>
                     <input
                       required
@@ -171,20 +179,34 @@ export class CardSettings extends React.Component {
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
                   <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Year building was completed <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                    <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2">
+                      Region
                     </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
+                    <Select options={options} onChange={this.handleRegion} />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2">
+                      Building type / main function{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
+                    </label>
+                    <Select options={options} onChange={this.handleRegion} />
+                  </div>
+                </div>
+                <div className="w-full lg:w-4/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2">
+                     Tenure Type
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
+                    </label>
+                    <Select options={options} onChange={this.handleRegion} />
                   </div>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
@@ -193,7 +215,11 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Building type / main function <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                      Year building was completed{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
                     </label>
                     <input
                       required
@@ -212,7 +238,11 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Number of floors/floors your business occupies <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                      Number of floors/floors your business occupies{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
                     </label>
                     <input
                       required
@@ -230,7 +260,11 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Total floor area/area your business occupies <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                      Total floor area/area your business occupies{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
                     </label>
                     <input
                       required
@@ -242,24 +276,7 @@ export class CardSettings extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Net internal area/area your business occupies
-                    </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
-                  </div>
-                </div>
+
                 <div className="w-full lg:w-4/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
@@ -302,33 +319,12 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Number of floors/floors your business occupies
+                      Address
                     </label>
                     <input
                       required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
-                  </div>
-                </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <div className="relative w-full mb-3"></div>
-                </div>
-                <div className="w-full lg:w-3/12 px-4">
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Main ventilation source <span  style={{color:'red', justifyContent:'center'}}> *</span>
-                    </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
+                      name="Address"
+                      value={this.state.Address}
                       onChange={this.handleChange}
                       type="text"
                       className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
@@ -341,25 +337,22 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Installed capacity
+                      Main ventilation source{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
                     </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
+                    <Select options={options} onChange={this.handleRegion} />
+
                   </div>
                 </div>
                 <div className="w-full lg:w-3/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Main heating source <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                      Installed capacity-KW
                     </label>
                     <input
                       required
@@ -375,9 +368,23 @@ export class CardSettings extends React.Component {
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Installed capacity
+                      Main heating source{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
+                    </label>
+                    <Select options={options} onChange={this.handleRegion} />
+
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                    >
+                      Installed capacity-KW
                     </label>
                     <input
                       required
@@ -393,9 +400,23 @@ export class CardSettings extends React.Component {
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Main domestic hot water source <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                      Main domestic hot water source{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
+                    </label>
+                    <Select options={options} onChange={this.handleRegion} />
+
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                    >
+                      Installed capacity-KW
                     </label>
                     <input
                       required
@@ -411,9 +432,23 @@ export class CardSettings extends React.Component {
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Installed capacity
+                      Main cooling source{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
+                    </label>
+                    <Select options={options} onChange={this.handleRegion} />
+
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                    >
+                      Installed capacity-KW
                     </label>
                     <input
                       required
@@ -429,9 +464,23 @@ export class CardSettings extends React.Component {
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Main cooling source <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                      Does the building have Thermal storage{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
+                    </label>
+                    <Select options={options} onChange={this.handleRegion} />
+
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                    >
+                      Installed capacity-L
                     </label>
                     <input
                       required
@@ -447,9 +496,23 @@ export class CardSettings extends React.Component {
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Installed capacity
+                      Does the building have on-site renewables{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
+                    </label>
+                    <Select options={options} onChange={this.handleRegion} />
+
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                    >
+                      Installed capacity-KW
                     </label>
                     <input
                       required
@@ -465,99 +528,23 @@ export class CardSettings extends React.Component {
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Does the building have Thermal storage <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                      Does the building have electric vehicle charging{' '}
+                      <span style={{ color: 'red', justifyContent: 'center' }}>
+                        {' '}
+                        *
+                      </span>
                     </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
+                    <Select options={options} onChange={this.handleRegion} />
+
                   </div>
                 </div>
                 <div className="w-full lg:w-3/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Installed capacity
-                    </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
-                  </div>
-                </div>
-                <div className="w-full lg:w-3/12 px-4">
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Does the building have on-site renewables <span  style={{color:'red', justifyContent:'center'}}> *</span>
-                    </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
-                  </div>
-                </div>
-                <div className="w-full lg:w-3/12 px-4">
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Installed capacity
-                    </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
-                  </div>
-                </div>
-                <div className="w-full lg:w-3/12 px-4">
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                       Does the building have electric vehicle charging  <span  style={{color:'red', justifyContent:'center'}}> *</span>
-                    </label>
-                    <input
-                      required
-                      name="AreaOfBuilding"
-                      value={this.state.AreaOfBuilding}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
-                  </div>
-                </div>
-                <div className="w-full lg:w-3/12 px-4">
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Installed capacity
+                      Installed capacity-KW
                     </label>
                     <input
                       required
@@ -605,42 +592,12 @@ export class CardSettings extends React.Component {
                     />
                   </div>
                 </div> */}
-                <div className="w-full lg:w-12/12 px-4">
+                <div className="w-full lg:w-3/12 px-4">
                   <div className="relative w-full mb-3">
                     <label
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
                     >
-                      Address
-                    </label>
-                    <input
-                      required
-                      name="Address"
-                      value={this.state.Address}
-                      onChange={this.handleChange}
-                      type="text"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    />
-                  </div>
-                </div>
-                <div className="w-full lg:w-12/12 px-4">
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Region
-                    </label>
-                    <Select options={options} onChange={this.handleRegion} />
-                  </div>
-                </div>
-                <div className="w-full lg:w-12/12 px-4">
-                  <div className="relative w-full mb-3">
-                    <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                      htmlFor="grid-password"
-                    >
-                      Excel File
+                     electricity data
                     </label>
                     <input
                       required
@@ -650,6 +607,16 @@ export class CardSettings extends React.Component {
                     />
                   </div>
                 </div>
+                {/* <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                    >
+                     electricity data
+                    </label>
+                  
+                  </div>
+                </div> */}
               </div>
               <div className="w-full lg:w-12/12 px-4">
                 <div className="relative w-full mb-3">
