@@ -1,8 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-solid-svg-icons'
+import {  faDownload, faEye, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { getStorage } from '../../shared/LoacalStorage'
 import CarbonGraph from './CarbonGraph'
+import CarbonBarChart from './CarbonBarChart'
+
+
+
 import { CardDetails } from './CardDetails'
 
 // components
@@ -82,7 +86,7 @@ export class CardTable extends React.Component {
       <>
         {reportList?.map((report) => (
           <tr key={report.reportId}>
-            <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+            <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left flex items-center">
               <span
                 className={
                   'ml-3 font-bold ' +
@@ -92,19 +96,19 @@ export class CardTable extends React.Component {
                 {report.business}
               </span>
             </th>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
               {report.building}
             </td>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
               {report.contactName}
             </td>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
               {report.contactName}
             </td>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
               {report.contactName}
             </td>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-lg whitespace-nowrap p-4">
               <button
                 id={report.reportId}
                 type="button"
@@ -112,6 +116,24 @@ export class CardTable extends React.Component {
                 className="btn btn-primary"
               >
                 <FontAwesomeIcon icon={faEye} />
+              </button>
+              {'    '}
+              <button
+                id={report.reportId}
+                type="button"
+                onClick={() => this.handleEdit(report.reportId)}
+                className="btn btn-primary"
+              >
+                <FontAwesomeIcon icon={faDownload} />
+              </button>
+              {'    '}
+              <button
+                id={report.reportId}
+                type="button"
+                onClick={() => this.handleEdit(report.reportId)}
+                className="btn btn-primary"
+              >
+                <FontAwesomeIcon icon={faTrash} />
               </button>
             </td>
           </tr>
@@ -232,6 +254,10 @@ export class CardTable extends React.Component {
             beisFootprint={this.state.beisFootprint}
           />
         </div>
+        <div className="w-full xl:w-8/12 mb-19 xl:mb-0 px-4">
+          <CarbonBarChart reportData={this.state.report} />
+        </div>
+       
       </>
     )
   }
