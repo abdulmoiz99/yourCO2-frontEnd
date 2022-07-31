@@ -12,6 +12,7 @@ import { Register } from './componenets/Auth/Register'
 import { Dashboard } from './views/Dashboard'
 import { AdminPage } from './views/AdminPage'
 import { Landing } from './views/Landing'
+import TermsPage from './views/TermsPage'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 root.render(
@@ -23,6 +24,8 @@ root.render(
       <Route path="/Dashboard" element={<Dashboard />}></Route>
       <Route path="/AdminPage" element={<AdminPage />}></Route>
       <Route path="/ContactUs" element={<Landing />}></Route>
+      <Route path="/TermsAndCondtions" element={<TermsPage />}></Route>
+
     </Routes>
   </BrowserRouter>,
 )

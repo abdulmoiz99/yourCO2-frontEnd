@@ -5,6 +5,10 @@ import Navbar from '../NavBar/AuthNavbar'
 import Alert from '../Alerts/Alert'
 
 export class Register extends React.Component {
+  openInNewTab = (e, url) => {
+    e.preventDefault()
+    window.open(url, '_blank', 'noopener,noreferrer')
+  }
   constructor(props) {
     super(props)
     this.state = {
@@ -184,11 +188,11 @@ export class Register extends React.Component {
                           <span className="ml-2 text-sm font-semibold text-blueGray-600">
                             I agree with the{' '}
                             <a
-                              href="#pablo"
+                              href="/TermsAndConditions"
                               className="text-lightBlue-500"
-                              onClick={(e) => e.preventDefault()}
+                              onClick={(e) => this.openInNewTab(e, '/TermsAndCondtions')}
                             >
-                              Privacy Policy
+                              Terms and Conditions
                             </a>
                           </span>
                         </label>
