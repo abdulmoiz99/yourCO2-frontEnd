@@ -14,6 +14,7 @@ import { AdminPage } from './views/AdminPage'
 import { Landing } from './views/Landing'
 import TermsPage from './views/TermsPage'
 import InstructionsPage from './views/InstructionsPage'
+import SampleReportPage from './views/SampleReportPage'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root'))
 root.render(
@@ -27,6 +28,7 @@ root.render(
       <Route path="/ContactUs" element={<Landing />}></Route>
       <Route path="/TermsAndCondtions" element={<TermsPage />}></Route>
       <Route path="/Instructions" element={<InstructionsPage />}></Route>
+      <Route path="/SampleReport" element={<SampleReportPage />}></Route>
 
 
     </Routes>

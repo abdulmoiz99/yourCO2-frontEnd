@@ -1,10 +1,10 @@
 import React from 'react'
 
 import Footer from '../componenets/Footers/Footer'
-import gitHub from '../assets/img/Instructions.JPG'
+import IMAGE from '../assets/img/SampleReport.JPG'
 import Navbar from '../componenets/NavBar/AuthNavbar'
 
-export default function InstructionsPage() {
+export default function SampleReportPage() {
   
   return (
     <>
@@ -49,7 +49,7 @@ export default function InstructionsPage() {
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
               <div className="mt-10 py-10 text-center">
                 <div className="flex flex-wrap justify-center">
-                  <img alt="..." className="w-full lg:w-12/12 " src={gitHub} />
+                  <img alt="..." className="w-full lg:w-12/12 " src={IMAGE} />
                 </div>
               </div>
             </div>
