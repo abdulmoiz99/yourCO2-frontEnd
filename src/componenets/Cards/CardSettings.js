@@ -175,7 +175,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Year building was completed
+                      Year building was completed <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -193,7 +193,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Building type / main function
+                      Building type / main function <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -212,7 +212,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Number of floors/floors your business occupies
+                      Number of floors/floors your business occupies <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -230,7 +230,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Total floor area/area your business occupies
+                      Total floor area/area your business occupies <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -323,7 +323,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Main ventilation source
+                      Main ventilation source <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -359,7 +359,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Main heating source
+                      Main heating source <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -395,7 +395,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Main domestic hot water source
+                      Main domestic hot water source <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -431,7 +431,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Main cooling source
+                      Main cooling source <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -467,7 +467,7 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Does the building have Thermal storage
+                      Does the building have Thermal storage <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
@@ -503,7 +503,43 @@ export class CardSettings extends React.Component {
                       className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       htmlFor="grid-password"
                     >
-                      Does the building have on-site renewables
+                      Does the building have on-site renewables <span  style={{color:'red', justifyContent:'center'}}> *</span>
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                      Installed capacity
+                    </label>
+                    <input
+                      required
+                      name="AreaOfBuilding"
+                      value={this.state.AreaOfBuilding}
+                      onChange={this.handleChange}
+                      type="text"
+                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    />
+                  </div>
+                </div>
+                <div className="w-full lg:w-3/12 px-4">
+                  <div className="relative w-full mb-3">
+                    <label
+                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      htmlFor="grid-password"
+                    >
+                       Does the building have electric vehicle charging  <span  style={{color:'red', justifyContent:'center'}}> *</span>
                     </label>
                     <input
                       required
