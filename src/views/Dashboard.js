@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from '../componenets/Sidebar/Sidebar'
 import NavBar from '../componenets/NavBar/AdminNavbar'
 import CarbonGraph from '../componenets/Cards/CarbonGraph'
+import CarbonBarChart from '../componenets/Cards/CarbonBarChart'
 
 import { CardSettings } from '../componenets/Cards/CardSettings'
 import FooterAdmin from '../componenets/Footers/FooterAdmin'
@@ -92,15 +93,19 @@ export class Dashboard extends React.Component {
                     beisFootprint={this.state.beisFootprint}
                   />
                 </div>
+                <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
+                  <CarbonBarChart reportData={this.state.report} />
+                </div>
               </div>
+              
             ) : null}
             <div className="flex flex-wrap">
-              <div className="w-full px-4">
+            <div className="w-full px-4">
                 <CardSettings
                   UpdateReportStatus={this.UpdateReportStatus.bind(this)}
                   onSelect={this.populateGraphData.bind(this)}
                 />
-              </div>
+              </div> 
             </div>
           </div>
         </div>
